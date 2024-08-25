@@ -49,7 +49,18 @@ header {
 
 .quick-links {
     display: flex;
+    /* Or other styling you prefer */
+    justify-content: flex-end;
+    /* Align to the end or customize */
     gap: 10px;
+    /* Space between links */
+}
+
+@media screen and (max-width: 768px) {
+    .quick-links {
+        display: none;
+        /* Hide quick links on screens smaller than 768px */
+    }
 }
 
 .social-icon {
