@@ -39,6 +39,49 @@
         <!-- Web Manifest -->
         <link rel="manifest" href="json/manifest.json">
         <link rel="stylesheet" href="styles.css">
+        <style>
+            main {
+                padding: 20px;
+            }
+            
+            section {
+                margin-bottom: 20px;
+            }
+            
+            .event {
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                padding: 15px;
+                margin-bottom: 10px;
+            }
+            
+            .event h3 {
+                margin-top: 0;
+            }
+            
+            #calendar {
+                background-color: #ffffff;
+                /* White background for the calendar */
+                border: 1px solid #ddd;
+                /* Light gray border */
+                padding: 10px;
+                margin: 20px auto;
+                width: 90%;
+            }
+            
+            #calendar iframe {
+                width: 100%;
+                height: 600px;
+                border: none;
+            }
+            
+            @media screen and (max-width: 768px) {
+                #calendar iframe {
+                    height: 400px;
+                }
+            }
+        </style>
     </head>
 
     <body>
@@ -81,21 +124,52 @@
 
         <!-- Main Content Area -->
         <main>
-            <section id="home">
-                <h2>Welcome to Our Website</h2>
-                <p>This is the main content area where you can place your primary content.</p>
+            <section id="past-events">
+                <h2>Past Events</h2>
+                <div class="event">
+                    <h3>End of Year Annual General Meeting 2023</h3>
+                    <p>Date: December 31, 2023</p>
+                    <p>Description: A review and reflection on the past year’s achievements and challenges.</p>
+                </div>
+                <div class="event">
+                    <h3>End of Year Annual General Meeting 2022</h3>
+                    <p>Date: December 31, 2022</p>
+                    <p>Description: Highlights from the previous year's activities and planning for the future.</p>
+                </div>
+                <div class="event">
+                    <h3>Official Opening Ceremony</h3>
+                    <p>Date: [Date]</p>
+                    <p>Description: Grand opening of our new facility.</p>
+                </div>
+                <div class="event">
+                    <h3>Giving Banana Suckers</h3>
+                    <p>Date: [Date]</p>
+                    <p>Description: Distribution of banana suckers to local farmers.</p>
+                </div>
+                <div class="event">
+                    <h3>Handing Over Welding Machines to Youths</h3>
+                    <p>Date: [Date]</p>
+                    <p>Description: Empowering youths with welding equipment for skill development.</p>
+                </div>
             </section>
-            <section id="about">
-                <h2>About Us</h2>
-                <p>Information about your company or organization.</p>
+
+            <section id="upcoming-events">
+                <h2>Upcoming Events</h2>
+                <div class="event">
+                    <h3>Commissioning of Health Workers' Houses at Kiyunga Health Center IV</h3>
+                    <p>Date: [Date]</p>
+                    <p>Description: Inauguration of new housing for health workers.</p>
+                </div>
+                <div class="event">
+                    <h3>End of Year Annual General Meeting 2024</h3>
+                    <p>Date: December 31, 2024</p>
+                    <p>Description: Planning and reflecting on the year's achievements and future goals.</p>
+                </div>
             </section>
-            <section id="services">
-                <h2>Our Services</h2>
-                <p>Details about the services you offer.</p>
-            </section>
-            <section id="contact">
-                <h2>Contact Us</h2>
-                <p>How to get in touch with you.</p>
+
+            <section id="calendar">
+                <h2>Event Calendar</h2>
+                <iframe src="https://calendar.google.com/calendar/embed?src=luukapatriotsassociation%40gmail.com&ctz=Africa%2FNairobi" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
             </section>
         </main>
 
