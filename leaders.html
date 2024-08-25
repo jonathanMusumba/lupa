@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leadership Hierarchy | LUUKA PATRIOTS ASSOCIATION</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/leadership.css">
+    <style>
+        /* General Styles */
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #004d40;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        h1,
+        h2 {
+            text-align: center;
+            color: #004d40;
+        }
+        
+        .hierarchy,
+        .profile-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+        
+        .leader-card,
+        .profile-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            width: 200px;
+            text-align: center;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .leader-card:hover,
+        .profile-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .leader-photo,
+        .profile-photo {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .leader-info,
+        .profile-info {
+            padding: 10px;
+        }
+        
+        .leader-info h3,
+        .profile-info h3 {
+            margin: 10px 0;
+            color: #004d40;
+        }
+        
+        .leader-info p,
+        .profile-info p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .profile-details {
+            text-align: left;
+            margin-top: 10px;
+        }
+        
+        .line {
+            width: 100%;
+            height: 2px;
+            background-color: #004d40;
+            margin: 20px 0;
+        }
+        /* Executive Committee: 3 in a row */
+        
+        .executive-committee {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .executive-committee .leader-card {
+            width: 30%;
+            margin: 10px 0;
+        }
+        /* Advisors: 4 in a row */
+        
+        .advisors {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .advisors .leader-card {
+            width: 22%;
+            margin: 10px 0;
+        }
+        /* Media queries to ensure responsiveness */
+        
+        @media screen and (max-width: 768px) {
+            .executive-committee .leader-card,
+            .advisors .leader-card {
+                width: 48%;
+                margin: 10px 0;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .executive-committee .leader-card,
+            .advisors .leader-card {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+        /* Modal Styles */
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 700px;
+            border-radius: 10px;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo-brand">
+            <img src="../images/logo.png" alt="Logo" class="logo">
+            <div class="brand-name">
+                <h1>LUUKA PATRIOTS ASSOCIATION</h1>
+                <p class="tagline">Together we can have a better Luuka</p>
+            </div>
+        </div>
+        <div class="quick-links">
+            <a href="https://www.facebook.com/LuukaPatriots/" target="_blank" class="social-icon" rel="noopener noreferrer">Facebook</a>
+            <a href="https://x.com/PatriotsLuuka" target="_blank" class="social-icon" rel="noopener noreferrer">Twitter</a>
+            <a href="https://instagram.com" target="_blank" class="social-icon" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.tiktok.com/@lupa2021" target="_blank" class="social-icon" rel="noopener noreferrer">TikTok</a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <section class="banner">
+            <h1>Leadership</h1>
+            <p>Meet our leadership team.</p>
+        </section>
+        <section class="leadership">
+            <h2>Leadership Hierarchy</h2>
+            <div class="hierarchy">
+                <!-- Patron -->
+                <div class="leader-card leader-patron" onclick="openModal('patronModal')">
+                    <img src="images/Prof.-Lubega.jpg" alt="Patron" class="leader-photo">
+                    <div class="leader-info">
+                        <h3>Patron</h3>
+                        <p>Prof Dr. Al hajji Lubega Muhamad</p>
+                    </div>
+                </div>
+                <div class="line line-patron"></div>
+
+                <!-- Executive Committee -->
+                <div class="leader-tier">
+                    <h4>Executive Committee</h4>
+                    <div class="line line-executive"></div>
+
+                    <div class="leader-card leader-chairperson" onclick="openModal('chairpersonModal')">
+                        <img src="images/chairperson.jpg" alt="Chairperson" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>Chairperson</h3>
+                            <p>MWASE G. RONALD</p>
+                        </div>
+                    </div>
+
+                    <div class="leader-card leader-vice-chairperson" onclick="openModal('viceChairpersonModal')">
+                        <img src="images/vice-chairperson.jpg" alt="Vice Chairperson" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>Vice Chairperson</h3>
+                            <p>SP ISANGA RICHARD KAWOOWO</p>
+                        </div>
+                    </div>
+
+                    <div class="leader-card leader-general-secretary" onclick="openModal('generalSecretaryModal')">
+                        <img src="images/general-secretary.jpg" alt="General Secretary" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>General Secretary</h3>
+                            <p>MIREMBE CISSY</p>
+                        </div>
+                    </div>
+
+                    <div class="leader-card leader-treasurer" onclick="openModal('treasurerModal')">
+                        <img src="images/treasurer.jpg" alt="Treasurer" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>Treasurer</h3>
+                            <p>MUZAALE CHARLES</p>
+                        </div>
+                    </div>
+
+                    <div class="leader-card leader-assistant-treasurer" onclick="openModal('assistantTreasurerModal')">
+                        <img src="images/assistant-treasurer.jpg" alt="Assistant Treasurer" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>Assistant Treasurer</h3>
+                            <p>NDIKIMWIZA IRENE</p>
+                        </div>
+                    </div>
+
+                    <div class="leader-card leader-discipline-secretary" onclick="openModal('disciplineSecretaryModal')">
+                        <img src="images/discipline-secretary.jpg" alt="Disciplinary Secretary" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>Disciplinary Secretary</h3>
+                            <p>DR. MUBIALIWO AMBROSE</p>
+                        </div>
+                    </div>
+
+                    <div class="leader-card leader-publicity-secretary" onclick="openModal('publicitySecretaryModal')">
+                        <img src="images/Ntogona.jpg" alt="Publicity Secretary" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>Publicity Secretary</h3>
+                            <p>NTOGONA UMAR</p>
+                        </div>
+                    </div>
+
+                    <div class="leader-card leader-it-focal" onclick="openModal('itFocalModal')">
+                        <img src="images/MUSUMBA.png" alt="IT Focal Person" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>IT Focal Person</h3>
+                            <p>MUSUMBA JONATHAN</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advisors -->
+                <div class="leader-tier">
+                    <h4>Advisors</h4>
+                    <div class="line line-advisors"></div>
+
+                    <div class="leader-card leader-legal-advisor" onclick="openModal('legalAdvisorModal')">
+                        <img src="images/Meddie.png" alt="Legal Advisor" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>Legal Advisor</h3>
+                            <p>SSENGENDO MEDDIE</p>
+                        </div>
+                    </div>
+
+                    <div class="leader-card leader-medical-advisor" onclick="openModal('medicalAdvisorModal')">
+                        <img src="images/BONGOMIN.png" alt="Medical Advisor" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>Medical Advisor</h3>
+                            <p>DR. BONGOMIN MATEESA</p>
+                        </div>
+                    </div>
+
+                    <div class="leader-card leader-spiritual-advisor" onclick="openModal('spiritualAdvisorModal')">
+                        <img src="images/Rev.-Asumani.jpg" alt="Spiritual Advisor" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>Spiritual Advisor</h3>
+                            <p>REV. ASUMANI AHMED</p>
+                        </div>
+                    </div>
+
+                    <div class="leader-card leader-education-advisor" onclick="openModal('educationAdvisorModal')">
+                        <img src="images/Noah.jpg" alt="Education Advisor" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>Education Advisor</h3>
+                            <p>Rev. NALIMBA NOAH</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modals -->
+        <!-- Patron Modal -->
+        <div id="patronModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('patronModal')">&times;</span>
+                <h3>Prof Dr. Al hajji Lubega Muhamad</h3>
+                <p>Prof Dr. Al hajji Lubega Muhamad is the Patron of Luuka Patriots Association...</p>
+            </div>
+        </div>
+
+        <!-- Chairperson Modal -->
+        <div id="chairpersonModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('chairpersonModal')">&times;</span>
+                <h3>MWASE G. RONALD</h3>
+                <p>MWASE G. RONALD is the Chairperson of Luuka Patriots Association...</p>
+            </div>
+        </div>
+
+        <!-- Vice Chairperson Modal -->
+        <div id="viceChairpersonModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('viceChairpersonModal')">&times;</span>
+                <h3>SP ISANGA RICHARD KAWOOWO</h3>
+                <p>SP ISANGA RICHARD KAWOOWO is the Vice Chairperson of Luuka Patriots Association...</p>
+            </div>
+        </div>
+
+        <!-- General Secretary Modal -->
+        <div id="generalSecretaryModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('generalSecretaryModal')">&times;</span>
+                <h3>MIREMBE CISSY</h3>
+                <p>MIREMBE CISSY is the General Secretary of Luuka Patriots Association...</p>
+            </div>
+        </div>
+
+        <!-- Treasurer Modal -->
+        <div id="treasurerModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('treasurerModal')">&times;</span>
+                <h3>MUZAALE CHARLES</h3>
+                <p>MUZAALE CHARLES is the Treasurer of Luuka Patriots Association...</p>
+            </div>
+        </div>
+
+        <!-- Assistant Treasurer Modal -->
+        <div id="assistantTreasurerModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('assistantTreasurerModal')">&times;</span>
+                <h3>NDIKIMWIZA IRENE</h3>
+                <p>NDIKIMWIZA IRENE is the Assistant Treasurer of Luuka Patriots Association...</p>
+            </div>
+        </div>
+
+        <!-- Discipline Secretary Modal -->
+        <div id="disciplineSecretaryModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('disciplineSecretaryModal')">&times;</span>
+                <h3>DR. MUBIALIWO AMBROSE</h3>
+                <p>DR. MUBIALIWO AMBROSE is the Disciplinary Secretary of Luuka Patriots Association...</p>
+            </div>
+        </div>
+
+        <!-- Publicity Secretary Modal -->
+        <div id="publicitySecretaryModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('publicitySecretaryModal')">&times;</span>
+                <h3>NTOGONA UMAR</h3>
+                <p>NTOGONA UMAR is the Publicity Secretary of Luuka Patriots Association...</p>
+            </div>
+        </div>
+
+        <!-- IT Focal Person Modal -->
+        <div id="itFocalModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('itFocalModal')">&times;</span>
+                <h3>MUSUMBA JONATHAN</h3>
+                <p>MUSUMBA JONATHAN is the IT Focal Person of Luuka Patriots Association...</p>
+            </div>
+        </div>
+
+        <!-- Legal Advisor Modal -->
+        <div id="legalAdvisorModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('legalAdvisorModal')">&times;</span>
+                <h3>SSENGENDO MEDDIE</h3>
+                <p>SSENGENDO MEDDIE is the Legal Advisor of Luuka Patriots Association...</p>
+            </div>
+        </div>
+
+        <!-- Medical Advisor Modal -->
+        <div id="medicalAdvisorModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('medicalAdvisorModal')">&times;</span>
+                <h3>DR. BONGOMIN MATEESA</h3>
+                <p>DR. BONGOMIN MATEESA is the Medical Advisor of Luuka Patriots Association...</p>
+            </div>
+        </div>
+
+        <!-- Spiritual Advisor Modal -->
+        <div id="spiritualAdvisorModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('spiritualAdvisorModal')">&times;</span>
+                <h3>REV. ASUMANI AHMED</h3>
+                <p>REV. ASUMANI AHMED is the Spiritual Advisor of Luuka Patriots Association...</p>
+            </div>
+        </div>
+
+        <!-- Education Advisor Modal -->
+        <div id="educationAdvisorModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('educationAdvisorModal')">&times;</span>
+                <h3>Rev. NALIMBA NOAH</h3>
+                <p>Rev. NALIMBA NOAH is the Education Advisor of Luuka Patriots Association...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Luuka Patriots Association. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let modal of modals) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

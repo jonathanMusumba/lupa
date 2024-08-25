@@ -1,0 +1,160 @@
+/* Reset some default styles */
+
+body,
+h1,
+h2,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo-brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+.brand-name h1 {
+    margin-left: 10px;
+    color: #333;
+}
+
+.tagline {
+    color: #777;
+    margin-left: 10px;
+    font-size: 0.9em;
+}
+
+.quick-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav {
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    /* Ensure proper stacking context */
+    z-index: 10;
+    /* Make sure it’s above other content */
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 24px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.nav-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-list li {
+    position: relative;
+}
+
+.nav-list li::after {
+    content: '|';
+    position: absolute;
+    right: -15px;
+}
+
+.nav-list li:last-child::after {
+    content: '';
+}
+
+main {
+    padding: 20px;
+    margin-top: 60px;
+    /* Adjust based on the height of your nav menu */
+    transition: margin-top 0.3s;
+    /* Smooth transition for responsive toggle */
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #000;
+        position: absolute;
+        top: 60px;
+        /* Adjust if needed based on your header height */
+        left: 0;
+        z-index: 10;
+        /* Ensure it’s above content */
+    }
+    .nav-toggle {
+        display: block;
+    }
+    .nav-list.active {
+        display: flex;
+    }
+    .nav-list a {
+        padding: 10px;
+        border-bottom: 1px solid #fff;
+    }
+    .nav-list li::after {
+        content: '';
+    }
+}

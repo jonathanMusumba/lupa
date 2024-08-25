@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- [Your existing head content] -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* styles.css */
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .banner,
+        .profiles {
+            text-align: center;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+        
+        .hierarchy {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        
+        .line {
+            width: 2px;
+            background: #000;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .line-patron {
+            height: 50px;
+            top: 100px;
+            /* Adjust according to layout */
+        }
+        
+        .line-executive {
+            height: 150px;
+            top: 180px;
+            /* Adjust according to layout */
+        }
+        
+        .line-advisors {
+            height: 150px;
+            top: 340px;
+            /* Adjust according to layout */
+        }
+        
+        .leader-tier {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .leader-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 150px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        
+        .leader-card img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+        }
+        
+        .leader-info {
+            padding: 10px;
+        }
+        
+        .profile-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .profile-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+            display: flex;
+            margin: 10px;
+        }
+        
+        .profile-card img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 10px;
+        }
+        
+        .profile-info {
+            padding: 10px;
+            flex: 1;
+        }
+        
+        .profile-details p {
+            margin: 5px 0;
+        }
+        
+        .profile-info h3 {
+            margin: 0;
+        }
+        
+        .profile-info h4 {
+            margin: 0;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-card {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- [Your existing header and navigation content] -->
+
+    <!-- Main Content Area -->
+    <main>
+        <section class="banner">
+            <h1>Leadership</h1>
+            <p>Meet our leadership team.</p>
+        </section>
+        <section class="leadership">
+            <h2>Leadership Hierarchy</h2>
+            <div class="hierarchy">
+                <!-- Patron -->
+                <div class="leader-card leader-patron">
+                    <img src="images/Prof.-Lubega.jpg" alt="Patron" class="leader-photo">
+                    <div class="leader-info">
+                        <h3>Patron</h3>
+                        <p>Prof Dr. Al hajji Lubega Muhamad</p>
+                    </div>
+                </div>
+                <div class="line line-patron"></div>
+
+                <!-- Executive Committee -->
+                <div class="leader-tier">
+                    <h4>Executive Committee</h4>
+                    <div class="line line-executive"></div>
+
+                    <div class="leader-card leader-chairperson">
+                        <img src="images/chairperson.jpg" alt="Chairperson" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>Chairperson</h3>
+                            <p>MWASE G. RONALD</p>
+                        </div>
+                    </div>
+
+                    <div class="leader-card leader-vice-chairperson">
+                        <img src="images/vice-chairperson.jpg" alt="Vice Chairperson" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>Vice Chairperson</h3>
+                            <p>SP ISANGA RICHARD KAWOOWO</p>
+                        </div>
+                    </div>
+
+                    <div class="leader-card leader-general-secretary">
+                        <img src="images/general-secretary.jpg" alt="General Secretary" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>General Secretary</h3>
+                            <p>MIREMBE CISSY</p>
+                        </div>
+                    </div>
+
+                    <div class="leader-card leader-treasurer">
+                        <img src="images/treasurer.jpg" alt="Treasurer" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>Treasurer</h3>
+                            <p>MUZAALE CHARLES</p>
+                        </div>
+                    </div>
+
+                    <div class="leader-card leader-assistant-treasurer">
+                        <img src="images/assistant-treasurer.jpg" alt="Assistant Treasurer" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>Assistant Treasurer</h3>
+                            <p>NDKIMWIZA IRENE</p>
+                        </div>
+                    </div>
+
+                    <div class="leader-card leader-discipline-secretary">
+                        <img src="images/discipline-secretary.jpg" alt="Disciplinary Secretary" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>Disciplinary Secretary</h3>
+                            <p>DR. MUBIALIWO AMBROSE</p>
+                        </div>
+                    </div>
+
+                    <div class="leader-card leader-publicity-secretary">
+                        <img src="images/Ntogona.jpg" alt="Publicity Secretary" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>Publicity Secretary</h3>
+                            <p>NTOGONA UMAR</p>
+                        </div>
+                    </div>
+
+                    <div class="leader-card leader-it-focal">
+                        <img src="images/MUSUMBA.png" alt="IT Focal Person" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>IT Focal Person</h3>
+                            <p>MUSUMBA JONATHAN</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advisors -->
+                <div class="leader-tier">
+                    <h4>Advisors</h4>
+                    <div class="line line-advisors"></div>
+
+                    <div class="leader-card leader-legal-advisor">
+                        <img src="images/Meddie.png" alt="Legal Advisor" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>Legal Advisor</h3>
+                            <p>Counsel Al Hajj Meddie B. Mulumba</p>
+                        </div>
+                    </div>
+
+                    <div class="leader-card leader-technical-advisor1">
+                        <img src="images/technical-advisor1.jpg" alt="Technical Advisor 1" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>Technical Advisor 1</h3>
+                            <p>Hajji Birungi Musa</p>
+                        </div>
+                    </div>
+
+                    <div class="leader-card leader-technical-advisor2">
+                        <img src="images/technical-advisor2.jpg" alt="Technical Advisor 2" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>Technical Advisor 2</h3>
+                            <p>Eng. Kyakulaga Patrick</p>
+                        </div>
+                    </div>
+
+                    <div class="leader-card leader-technical-advisor3">
+                        <img src="images/1.jpg" alt="Technical Advisor 3" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>Technical Advisor 3</h3>
+                            <p>Hon. Kyobe Inyensiko Luke</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profiles">
+            <h2>Detailed Profiles</h2>
+            <div class="profile-container">
+                <!-- Detailed profiles for each leader -->
+                <div class="profile-card">
+                    <img src="images/Prof.-Lubega.jpg" alt="Prof Lubega Muhamad" class="profile-photo">
+                    <div class="profile-info">
+                        <h3>Prof Lubega Muhamad</h3>
+                        <h4>Patron</h4>
+                        <p>Prof Lubega Muhamad is the topmost head of the association. He provides overall guidance and strategic direction to ensure the organization's mission and goals are achieved effectively.</p>
+                        <div class="profile-details">
+                            <p><strong>Academic Achievements:</strong> PhD in Development Studies, MSc in Economics</p>
+                            <p><strong>Other Information:</strong> Extensive experience in community development and poverty alleviation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/chairperson.jpg" alt="MWASE G. RONALD" class="profile-photo">
+                    <div class="profile-info">
+                        <h3>MWASE G. RONALD</h3>
+                        <h4>Chairperson</h4>
+                        <p>MWASE G. RONALD leads the executive committee, setting the strategic direction of the association and making key decisions to drive its mission forward.</p>
+                        <div class="profile-details">
+                            <p><strong>Academic Achievements:</strong> MBA in Management</p>
+                            <p><strong>Other Information:</strong> Skilled in leadership and organizational management.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/vice-chairperson.jpg" alt="SP ISANGA RICHARD KAWOOWO" class="profile-photo">
+                    <div class="profile-info">
+                        <h3>SP ISANGA RICHARD KAWOOWO</h3>
+                        <h4>Vice Chairperson</h4>
+                        <p>SP ISANGA RICHARD KAWOOWO supports the Chairperson in executing the association's strategic initiatives and managing day-to-day operations.</p>
+                        <div class="profile-details">
+                            <p><strong>Academic Achievements:</strong> BSc in Social Sciences</p>
+                            <p><strong>Other Information:</strong> Experienced in organizational management and community outreach.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/general-secretary.jpg" alt="MIREMBE CISSY" class="profile-photo">
+                    <div class="profile-info">
+                        <h3>MIREMBE CISSY</h3>
+                        <h4>General Secretary</h4>
+                        <p>MIREMBE CISSY manages the administrative functions of the association, including meeting minutes and official correspondence.</p>
+                        <div class="profile-details">
+                            <p><strong>Academic Achievements:</strong> BA in Administration</p>
+                            <p><strong>Other Information:</strong> Strong organizational and communication skills.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/treasurer.jpg" alt="MUZAALE CHARLES" class="profile-photo">
+                    <div class="profile-info">
+                        <h3>MUZAALE CHARLES</h3>
+                        <h4>Treasurer</h4>
+                        <p>MUZAALE CHARLES is responsible for managing the financial resources of the association, ensuring transparency and accuracy in all transactions.</p>
+                        <div class="profile-details">
+                            <p><strong>Academic Achievements:</strong> BCom in Accounting</p>
+                            <p><strong>Other Information:</strong> Experienced in financial management and budgeting.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/assistant-treasurer.jpg" alt="NDKIMWIZA IRENE" class="profile-photo">
+                    <div class="profile-info">
+                        <h3>NDKIMWIZA IRENE</h3>
+                        <h4>Assistant Treasurer</h4>
+                        <p>NDKIMWIZA IRENE assists the Treasurer with managing financial operations and maintaining financial records.</p>
+                        <div class="profile-details">
+                            <p><strong>Academic Achievements:</strong> Diploma in Accounting</p>
+                            <p><strong>Other Information:</strong> Proficient in financial software and reporting.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/discipline-secretary.jpg" alt="DR. MUBIALIWO AMBROSE" class="profile-photo">
+                    <div class="profile-info">
+                        <h3>DR. MUBIALIWO AMBROSE</h3>
+                        <h4>Disciplinary Secretary</h4>
+                        <p>DR. MUBIALIWO AMBROSE oversees disciplinary matters within the association, ensuring adherence to rules and regulations.</p>
+                        <div class="profile-details">
+                            <p><strong>Academic Achievements:</strong> PhD in Law</p>
+                            <p><strong>Other Information:</strong> Expertise in legal affairs and conflict resolution.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/Ntogona.jpg" alt="NTOGONA UMAR" class="profile-photo">
+                    <div class="profile-info">
+                        <h3>NTOGONA UMAR</h3>
+                        <h4>Publicity Secretary</h4>
+                        <p>NTOGONA UMAR handles public relations and communications, promoting the association’s activities and achievements.</p>
+                        <div class="profile-details">
+                            <p><strong>Academic Achievements:</strong> BA in Mass Communication</p>
+                            <p><strong>Other Information:</strong> Skilled in media relations and marketing.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/MUSUMBA.png" alt="MUSUMBA JONATHAN" class="profile-photo">
+                    <div class="profile-info">
+                        <h3>MUSUMBA JONATHAN</h3>
+                        <h4>IT Focal Person</h4>
+                        <p>MUSUMBA JONATHAN is responsible for managing the association's IT infrastructure and digital communications.</p>
+                        <div class="profile-details">
+                            <p><strong>Academic Achievements:</strong> BSc in Information Technology</p>
+                            <p><strong>Other Information:</strong> Expertise in network administration and IT support.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/Meddie.png" alt="Counsel Al Hajj Meddie B. Mulumba" class="profile-photo">
+                    <div class="profile-info">
+                        <h3>Counsel Al Hajj Meddie B. Mulumba</h3>
+                        <h4>Legal Advisor</h4>
+                        <p>Counsel Al Hajj Meddie B. Mulumba provides legal advice and support to ensure compliance with laws and regulations.</p>
+                        <div class="profile-details">
+                            <p><strong>Academic Achievements:</strong> LLB, MA in Law</p>
+                            <p><strong>Other Information:</strong> Extensive experience in legal practice and advisory.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/technical-advisor1.jpg" alt="Hajji Birungi Musa" class="profile-photo">
+                    <div class="profile-info">
+                        <h3>Hajji Birungi Musa</h3>
+                        <h4>Technical Advisor 1</h4>
+                        <p>Hajji Birungi Musa offers technical guidance and support on project implementations and technical matters.</p>
+                        <div class="profile-details">
+                            <p><strong>Academic Achievements:</strong> BSc in Engineering</p>
+                            <p><strong>Other Information:</strong> Expert in project management and technical solutions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/technical-advisor2.jpg" alt="Eng. Kyakulaga Patrick" class="profile-photo">
+                    <div class="profile-info">
+                        <h3>Eng. Kyakulaga Patrick</h3>
+                        <h4>Technical Advisor 2</h4>
+                        <p>Eng. Kyakulaga Patrick provides expert advice on technical aspects and engineering projects.</p>
+                        <div class="profile-details">
+                            <p><strong>Academic Achievements:</strong> MSc in Civil Engineering</p>
+                            <p><strong>Other Information:</strong> Extensive experience in infrastructure development.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/1.jpg" alt="Hon. Kyobe Inyensiko Luke" class="profile-photo">
+                    <div class="profile-info">
+                        <h3>Hon. Kyobe Inyensiko Luke</h3>
+                        <h4>Technical Advisor 3</h4>
+                        <p>Hon. Kyobe Inyensiko Luke provides high-level technical advice and strategic insights.</p>
+                        <div class="profile-details">
+                            <p><strong>Academic Achievements:</strong> BSc in Technology</p>
+                            <p><strong>Other Information:</strong> Renowned for strategic innovation and leadership.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- [Your existing footer content] -->
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
