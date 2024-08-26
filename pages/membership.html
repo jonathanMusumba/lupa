@@ -39,6 +39,14 @@
         <!-- Web Manifest -->
         <link rel="manifest" href="../json/manifest.json">
         <link rel="stylesheet" href="styles.css">
+        <script>
+            // JavaScript to simulate a dynamic member count
+            document.addEventListener('DOMContentLoaded', function() {
+                const memberCountElement = document.getElementById('member-count');
+                let count = 500; // Starting point, can be updated dynamically with a backend
+                memberCountElement.textContent = count.toLocaleString();
+            });
+        </script>
     </head>
 
     <body>
@@ -81,27 +89,31 @@
 
         <!-- Main Content Area -->
         <main>
-            <section id="home">
-                <h2>Welcome to Our Website</h2>
-                <p>This is the main content area where you can place your primary content.</p>
+            <section class="banner">
+                <h1>Membership</h1>
+                <p>Join our association and be part of our community!</p>
             </section>
-            <section id="about">
-                <h2>About Us</h2>
-                <p>Information about your company or organization.</p>
+            <section class="membership">
+                <h2>Membership Benefits</h2>
+                <p>As a member, you will benefit from:</p>
+                <ul>
+                    <li>Access to exclusive events and networking opportunities.</li>
+                    <li>Support during challenging times, including the loss of biological parents, a child, or a partner.</li>
+                    <li>Participation in community-driven projects and initiatives.</li>
+                </ul>
+                <h2>How to Join</h2>
+                <p>Fill out the membership form below to become a member:</p>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfD8Czj4XzG7K1WUJtUw2D3zjhlR7R7txBaE5L47Pv5MdQxmA/viewform?embedded=true" width="640" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             </section>
-            <section id="services">
-                <h2>Our Services</h2>
-                <p>Details about the services you offer.</p>
-            </section>
-            <section id="contact">
-                <h2>Contact Us</h2>
-                <p>How to get in touch with you.</p>
+            <section class="member-stats">
+                <h2>Current Number of Registered Members</h2>
+                <p id="member-count">Loading...</p>
             </section>
         </main>
 
         <!-- Footer -->
         <footer>
-            <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+            <p>&copy; 2024 Luuka Patriots Association-LUPA. All rights reserved.</p>
             <div class="footer-links">
                 <a href="https://www.facebook.com/LuukaPatriots/" target="_blank" class="social-icon" rel="noopener noreferrer">Facebook</a>
                 <a href="https://x.com/PatriotsLuuka" target="_blank" class="social-icon" rel="noopener noreferrer">Twitter</a>
