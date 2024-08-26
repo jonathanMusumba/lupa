@@ -39,6 +39,7 @@
         <!-- Web Manifest -->
         <link rel="manifest" href="json/manifest.json">
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="pages/swiper-bundle.min.css">
         <!-- Google Tag Manager -->
         <script>
             (function(w, d, s, l, i) {
@@ -103,27 +104,96 @@
 
         <!-- Main Content Area -->
         <main>
-            <section id="home">
-                <h2>Welcome to Our Website</h2>
-                <p>This is the main content area where you can place your primary content.</p>
+            <section class="hero-banner">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/gallery/8.jpg" alt="Empowering Community">
+                            <div class="caption">Empowering Our Community Towards Sustainable Development</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/gallery/17.jpg" alt="Reducing Poverty">
+                            <div class="caption">Together We Can Reduce Poverty and Unemployment</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/gallery/10.jpg" alt="Luuka Patriots">
+                            <div class="caption">Join Us in Making a Better Luuka</div>
+                        </div>
+                    </div>
+                    <!-- Swiper Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Swiper Navigation Buttons -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <!-- Call-to-Action Button -->
+                <a href="pages/membership.html" class="cta-button">Join Us Today</a>
             </section>
-            <section id="about">
-                <h2>About Us</h2>
-                <p>Information about your company or organization.</p>
+
+            <section id="about-home">
+                <h2>About Luuka Patriots Association</h2>
+                <p>The Luuka Patriots Association is committed to reducing poverty and unemployment in Luuka Town Council by empowering community members through sustainable development initiatives.</p>
+                <a href="pages/about.html" class="learn-more">Learn More About Us</a>
             </section>
-            <section id="services">
-                <h2>Our Services</h2>
-                <p>Details about the services you offer.</p>
+            <section id="objectives">
+                <h2>Our Objectives</h2>
+                <div class="objectives-grid">
+                    <div class="objective-item">
+                        <h3>Poverty Reduction</h3>
+                        <p>We focus on initiatives aimed at reducing poverty by creating employment opportunities and empowering the youth.</p>
+                    </div>
+                    <div class="objective-item">
+                        <h3>Community Empowerment</h3>
+                        <p>We provide training and resources to help community members develop sustainable livelihoods.</p>
+                    </div>
+                    <div class="objective-item">
+                        <h3>Health and Education</h3>
+                        <p>Our programs aim to improve access to healthcare and education in the community.</p>
+                    </div>
+                </div>
+                <a href="pages/objectives.html" class="learn-more">View All Objectives</a>
             </section>
-            <section id="contact">
-                <h2>Contact Us</h2>
-                <p>How to get in touch with you.</p>
+
+            <section id="events-home">
+                <h2>Upcoming Events</h2>
+                <div class="events-grid">
+                    <div class="event-item">
+                        <h3>End of Year Annual General Meeting & Party</h3>
+                        <p>Join us for the Annual General Meeting And End of Party.</p>
+                        <span class="event-date">Date: 31st December 2024</span>
+                    </div>
+                    <div class="event-item">
+                        <h3>Commisioning of Health Workers Houses</h3>
+                        <p>Join us as we handle over the Houses to the Haelth workers.</p>
+                        <span class="event-date">Date: shall be communicated</span>
+                    </div>
+
+                </div>
+                <a href="pages/events.html" class="learn-more">View All Events</a>
             </section>
+            <section id="testimonials-home">
+                <h2>What Our Members Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-item">
+                        <p>"Joining Luuka Patriots has been a life-changing experience. I've gained skills and knowledge that have helped me start my own business."</p>
+                        <span class="testimonial-author">- Sarah K.</span>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"The community programs have greatly improved our living conditions. We're now more united and focused on development."</p>
+                        <span class="testimonial-author">- John M.</span>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"I appreciate the efforts of Luuka Patriots in providing health services to our community. It's a big step towards a healthier society."</p>
+                        <span class="testimonial-author">- Grace N.</span>
+                    </div>
+                </div>
+            </section>
+
         </main>
 
         <!-- Footer -->
         <footer>
-            <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+            <p>&copy; 2024 Luuka Patriots Association. All rights reserved.</p>
             <div class="footer-links">
                 <a href="https://www.facebook.com/LuukaPatriots/" target="_blank" class="social-icon" rel="noopener noreferrer">Facebook</a>
                 <a href="https://x.com/PatriotsLuuka" target="_blank" class="social-icon" rel="noopener noreferrer">Twitter</a>
@@ -136,6 +206,28 @@
         </footer>
 
         <script src="js/script.js"></script>
+        <script src="js/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper('.swiper-container', {
+                loop: true, // Enable looping
+                autoplay: {
+                    delay: 5000, // Time between slides (in milliseconds)
+                    disableOnInteraction: false, // Continue autoplay after user interaction
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true, // Make dots clickable
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                effect: 'fade', // Smooth fade transition between slides
+                fadeEffect: {
+                    crossFade: true,
+                },
+            });
+        </script>
     </body>
 
 </html>

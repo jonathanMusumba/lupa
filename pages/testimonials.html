@@ -39,6 +39,8 @@
         <!-- Web Manifest -->
         <link rel="manifest" href="../json/manifest.json">
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="testimonials.css">
+        <link rel="stylesheet" href="swiper-bundle.min.css">
     </head>
 
     <body>
@@ -81,22 +83,114 @@
 
         <!-- Main Content Area -->
         <main>
-            <section id="testimonials">
-                <h2>Welcome to Our Website</h2>
-                <p>This is the main content area where you can place your primary content.</p>
+
+            <section class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../images/gallery/1.jpg" alt="Event 1">
+                        <div class="caption">
+                            <h1>Lupa Banana</h1>
+                            <p>offloading the Banana Suckers at Kituto Primary school</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/gallery/12.jpg" alt="Event 1">
+                        <div class="caption">
+                            <h1>Handover of Welding Machine to Bulanga</h1>
+                            <p>Deputy RDC Luuka while handing over welding machine to the youth of Bulanga Town council</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/gallery/18.jpg" alt="Event 1">
+                        <div class="caption">
+                            <h1>Banana Suckers</h1>
+                            <p>The Banana suckers that we given out</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/gallery/17.jpg" alt="Event 1">
+                        <div class="caption">
+                            <h1>Banana Suckers</h1>
+                            <p>Beneficiaries of the Banana suckers pack their suckers at Kituto primary school,Nawamptiti Sub county</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/gallery/8.jpg" alt="Event 1">
+                        <div class="caption">
+                            <h1>Event Title</h1>
+                            <p>Description for Event 1</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/gallery/4.jpg" alt="Event 1">
+                        <div class="caption">Caption for Event 1</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/gallery/2.jpg" alt="Event 1">
+                        <div class="caption">
+                            <h1>Supervision of the Ongoing Construction</h1>
+                            <p>Patron,Executive and Other people supervising the ongoing construction of the Health workers house</p>
+                        </div>
+                    </div>
+
+                    <!-- More swiper slides can be added here -->
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </section>
-            <section id="about">
-                <h2>About Us</h2>
-                <p>Information about your company or organization.</p>
-            </section>
-            <section id="services">
-                <h2>Our Services</h2>
-                <p>Details about the services you offer.</p>
-            </section>
-            <section id="contact">
-                <h2>Contact Us</h2>
-                <p>How to get in touch with you.</p>
-            </section>
+            <h2>What Our Members Say</h2>
+            <div class="testimonials">
+                <div class="testimonial-container">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <img src="../images/MUSUMBA.png" alt="Testimonial 1">
+                            <p>"The support from Luuka Patriots has been transformative for our community."</p>
+                            <h4>Jonathan</h4>
+                        </div>
+                        <div class="testimonial-overlay overlay-vertical">
+                            <p>Received Computer Equipement from LUPA</p>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <img src="../images/Ntogona.jpeg" alt="Testimonial 2">
+                            <p>"I am grateful for the opportunities and the support provided by the organization."</p>
+                            <h4>Umar</h4>
+                        </div>
+                        <div class="testimonial-overlay overlay-horizontal">
+                            <p>Head of youth Group that received the Welding Machine</p>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <img src="../images/mwase.jpg" alt="Testimonial 3">
+                            <p>"The team’s commitment has greatly impacted our progress."</p>
+                            <h4>Mwase Gideon Ronald</h4>
+                        </div>
+                        <div class="testimonial-overlay overlay-fade">
+                            <p>received banana Suckers from LUPA</p>
+                        </div>
+                    </div>
+                    <!-- Testimonial 4 (Video) -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-content video-testimonial">
+                            <video controls>
+                                <source src="../videos/testimonial-video.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p>"Watch this video to hear more about our impactful work."</p>
+                            <h4>Video Testimony</h4>
+                        </div>
+                        <div class="testimonial-overlay overlay-fade">
+                            <p>Overlay with Fade Transition</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <!-- Footer -->
@@ -114,6 +208,35 @@
         </footer>
 
         <script src="../js/script.js"></script>
+        <script src="../js/swiper-bundle.min.js"></script>
+        <script>
+            // Initialize Swiper
+            var swiper = new Swiper('.swiper-container', {
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+            document.querySelectorAll('.testimonial-item').forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    const overlay = item.querySelector('.testimonial-overlay');
+                    overlay.classList.add('overlay-fade'); // Change to desired animation class
+                });
+
+                item.addEventListener('mouseleave', () => {
+                    const overlay = item.querySelector('.testimonial-overlay');
+                    overlay.classList.remove('overlay-fade'); // Change to desired animation class
+                });
+            });
+        </script>
     </body>
 
 </html>

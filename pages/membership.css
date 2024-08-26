@@ -1,0 +1,91 @@
+.banner {
+    background: #007bff;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.banner h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 18px;
+}
+
+.membership,
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1000px;
+}
+
+.membership h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.membership ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.membership ul li {
+    margin: 10px 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.membership ul li i {
+    color: #333;
+    margin-right: 10px;
+}
+
+.card {
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff1100;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.card .btn:hover {
+    background: #0056b3;
+}
+
+.member-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.member-stats .card {
+    flex: 1;
+    margin: 10px;
+    min-width: 280px;
+}

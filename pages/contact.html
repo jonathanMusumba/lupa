@@ -85,7 +85,7 @@
                 <!-- Contact Form Section -->
                 <section class="contact-form">
                     <h2>Contact Us</h2>
-                    <form action="#" method="POST">
+                    <form id="contactForm" action="#" method="POST">
                         <div class="form-group">
                             <label for="name">Your Name</label>
                             <input type="text" id="name" name="name" required>
@@ -146,6 +146,13 @@
         </footer>
 
         <script src="../js/script.js"></script>
+        <script>
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent form submission
+                alert('Form submission is currently disabled.');
+            });
+        </script>
+
     </body>
 
 </html>

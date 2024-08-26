@@ -39,6 +39,8 @@
         <!-- Web Manifest -->
         <link rel="manifest" href="../json/manifest.json">
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="membership.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <script>
             // JavaScript to simulate a dynamic member count
             document.addEventListener('DOMContentLoaded', function() {
@@ -94,20 +96,35 @@
                 <p>Join our association and be part of our community!</p>
             </section>
             <section class="membership">
-                <h2>Membership Benefits</h2>
-                <p>As a member, you will benefit from:</p>
-                <ul>
-                    <li>Access to exclusive events and networking opportunities.</li>
-                    <li>Support during challenging times, including the loss of biological parents, a child, or a partner.</li>
-                    <li>Participation in community-driven projects and initiatives.</li>
-                </ul>
-                <h2>How to Join</h2>
-                <p>Fill out the membership form below to become a member:</p>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfD8Czj4XzG7K1WUJtUw2D3zjhlR7R7txBaE5L47Pv5MdQxmA/viewform?embedded=true" width="640" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-            </section>
-            <section class="member-stats">
-                <h2>Current Number of Registered Members</h2>
-                <p id="member-count">Loading...</p>
+                <section class="membership">
+                    <h2>Membership Benefits</h2>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Access to exclusive events and networking opportunities.</li>
+                        <li><i class="fas fa-check-circle"></i> Support during challenging times, including the loss of biological parents, a child, or a partner.</li>
+                        <li><i class="fas fa-check-circle"></i> Participation in community-driven projects and initiatives.</li>
+                    </ul>
+                </section>
+                <section class="membership">
+                    <h2>Membership Procedures</h2>
+                    <ul>
+                        <li><i class="fas fa-user-check"></i> Must be 18 years of age or older.</li>
+                        <li><i class="fas fa-money-bill"></i> Pay a membership fee of UGX 25,000.</li>
+                        <li><i class="fas fa-calendar"></i> Pay an annual subscription of UGX 30,000.</li>
+                        <li><i class="fas fa-flag"></i> Must be a Ugandan citizen.</li>
+                    </ul>
+                </section>
+                <section class="card">
+                    <h2>Become Part of Us Today</h2>
+                    <p>To join our association, please complete the membership form.</p>
+                    <a href="https://forms.gle/xqNewCKctFGYir3b7" class="btn fas fa-user-plus" target="_blank" rel="noopener noreferrer">
+                        Register as a member
+                      </a>
+
+                </section>
+                <div class="card">
+                    <h2>Our Members</h2>
+                    <p id="member-count">Loading...</p>
+                </div>
             </section>
         </main>
 

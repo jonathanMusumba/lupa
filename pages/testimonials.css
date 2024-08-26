@@ -1,0 +1,229 @@
+/* General Container Styling */
+
+.testimonials {
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* Grid Layout for Testimonial Items */
+
+.testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+
+/* Individual Testimonial Item */
+
+.testimonial-item {
+    background-color: #ececec;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+
+/* Content within the Testimonial Item */
+
+.testimonial-content {
+    position: relative;
+}
+
+
+/* Video Testimonial Specific Styling */
+
+.video-testimonial video {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+
+/* Image Styling */
+
+.testimonial-content img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+
+/* Testimonial Text Styling */
+
+.testimonial-content p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.testimonial-content h4 {
+    font-size: 1.1em;
+    color: #333;
+    font-weight: bold;
+}
+
+
+/* Overlay Styles */
+
+.testimonial-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.testimonial-overlay p {
+    font-size: 1.2em;
+}
+
+
+/* Specific Overlay Transitions */
+
+.overlay-vertical {
+    transform: translateY(-100%);
+}
+
+.overlay-horizontal {
+    transform: translateX(-100%);
+}
+
+.overlay-fade {
+    opacity: 0;
+}
+
+
+/* Overlay Transition on Hover */
+
+.testimonial-item:hover .testimonial-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Container settings */
+
+.swiper-container {
+    width: 100%;
+    height: 600px;
+    /* Adjust this value to control the height */
+    position: relative;
+}
+
+
+/* Slide settings */
+
+.swiper-slide {
+    position: relative;
+}
+
+
+/* Image settings */
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensure the image covers the slide without distortion */
+}
+
+
+/* Caption styling */
+
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+    /* Account for padding from both sides */
+    background: rgba(0, 0, 0, 0.7);
+    /* Slightly darker background for better readability */
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    /* Longer transition for smoother effect */
+    z-index: 10;
+}
+
+
+/* Hover effect for caption */
+
+.swiper-slide:hover .caption,
+.swiper-slide-active .caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Heading styling */
+
+.caption h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    /* Smooth color transition */
+}
+
+
+/* Paragraph styling */
+
+.caption p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+    /* Smooth color transition */
+}
+
+
+/* Hover effect for heading and paragraph */
+
+.swiper-slide:hover .caption h1 {
+    color: #ff5722;
+    /* Change color on hover */
+}
+
+.swiper-slide:hover .caption p {
+    color: #ddd;
+    /* Change color on hover */
+}
+
+
+/* Swiper pagination bullets */
+
+.swiper-pagination-bullet {
+    background: #bbb;
+}
+
+.swiper-pagination-bullet-active {
+    background: #717171;
+}
+
+
+/* Swiper navigation buttons */
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #717171;
+}

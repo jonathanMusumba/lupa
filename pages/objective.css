@@ -1,0 +1,97 @@
+.banner {
+    background-color: #007BFF;
+    /* Banner background color */
+    color: #fff;
+    /* Text color for contrast */
+    padding: 40px 20px;
+    /* Padding around the banner content */
+    text-align: center;
+    /* Center-align text */
+    border-radius: 8px;
+    /* Rounded corners for the banner */
+    margin-bottom: 20px;
+    /* Space below the banner */
+}
+
+.banner-content h1 {
+    font-size: 2.5em;
+    /* Larger font size for the banner title */
+    margin-bottom: 10px;
+    /* Space below the title */
+}
+
+.banner-content p {
+    font-size: 1.2em;
+    /* Slightly larger font size for readability */
+    line-height: 1.6;
+    /* Line height for better readability */
+}
+
+
+/* Main Content Area Styles */
+
+main {
+    padding: 20px;
+    background-color: #f9f9f9;
+    /* Light background color for contrast */
+}
+
+.objectives-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows content to wrap in smaller screens */
+    gap: 20px;
+    /* Space between columns */
+}
+
+.objective {
+    background-color: #fff;
+    /* White background for each objective card */
+    border-radius: 8px;
+    /* Rounded corners for cards */
+    border: 2px solid #007BFF;
+    /* Border color matching the theme */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    padding: 20px;
+    flex: 1 1 calc(50% - 40px);
+    /* Two columns with gap adjustment */
+    margin: 10px;
+    min-width: 280px;
+    /* Ensures readability on smaller screens */
+}
+
+.objective h2 {
+    font-size: 1.5em;
+    /* Larger heading for emphasis */
+    color: #007BFF;
+    /* Heading color to match border */
+    margin-bottom: 10px;
+}
+
+.objective p {
+    font-size: 1em;
+    /* Standard font size for paragraphs */
+    color: #333;
+    /* Dark color for text for readability */
+}
+
+.objective .icon {
+    font-size: 2em;
+    /* Larger icon size for prominence */
+    color: #007BFF;
+    /* Icon color to match theme */
+    margin-bottom: 15px;
+    display: block;
+    /* Centers the icon above the text */
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .objective {
+        flex: 1 1 100%;
+        /* Stacks the columns on smaller screens */
+    }
+}
