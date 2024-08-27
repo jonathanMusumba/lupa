@@ -1,7 +1,7 @@
 const CACHE_NAME = 'lupa-cache-v1';
 const urlsToCache = [
     '/',
-    '/index.html',
+    '../index.html',
     '/styles.css',
     '/js/script.js',
     '/images/favicon/apple-touch-icon.png'
