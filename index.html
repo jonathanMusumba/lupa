@@ -44,11 +44,11 @@
     <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
 
     <!-- Web Manifest -->
-    <link rel="manifest" href="json/manifest.json">
+    <link rel="manifest" href="/json/manifest.json">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="pages/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/pages/swiper-bundle.min.css">
 
     <!-- Google Tag Manager -->
     <script>
@@ -239,7 +239,7 @@
         });
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {
-                navigator.serviceWorker.register('js/service-worker.js').then(function(registration) {
+                navigator.serviceWorker.register('/js/service-worker.js').then(function(registration) {
                     console.log('Service Worker registered with scope:', registration.scope);
                 }, function(error) {
                     console.log('Service Worker registration failed:', error);
