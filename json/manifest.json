@@ -2,7 +2,7 @@
     "name": "LUPA",
     "short_name": "LUPA",
     "description": "LUUKA PATRIOTS ASSOCIATION is dedicated to reducing poverty and unemployment in LUUKA TC, KIYUNGA CENTRAL WARD IN LUUKA TOWN COUNCIL. Empowering community members towards sustainable development.",
-    "start_url": "/index.html",
+    "start_url": "index.html",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000",
