@@ -3,7 +3,7 @@ const urlsToCache = [
     '/',
     '/index.html',
     '/styles.css',
-    '/script.js',
+    '/js/script.js',
     '/images/favicon/apple-touch-icon.png'
 ];
 
